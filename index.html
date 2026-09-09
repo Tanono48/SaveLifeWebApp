@@ -1,463 +1,59 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
-        integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
-    <title>SaveLife</title>
-    <link rel="icon" type="image/x-icon"
-        href="https://media.discordapp.net/attachments/988432733552386098/989188386185175050/IMG_4955.png?width=474&height=474">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>กินดี — สั่งอาหารที่โต๊ะ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">ก</span><span>กินดี</span></a>
+    <div class="table-pill"><span class="pulse"></span> โต๊ะ 08 <span class="muted">· ชั้น 1</span></div>
+    <button class="profile" aria-label="บัญชีผู้ใช้">ส</button>
+  </header>
 
-<body onload="init();">
-
-    <div class="sidebar close">
-        <div class="logo-details">
-            <img src="https://media.discordapp.net/attachments/988432733552386098/989188386185175050/IMG_4955.png?width=474&height=474"
-                alt="">
-            <span class="logo_name">SaveLife</span>
-
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#home">
-                    <i class="fas fa-home"></i>
-                    <span class="link_name">Home</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#home">Home</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#dashboard">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="link_name">DashBoard</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#dashboard">DashBoard</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#maps">
-                    <i class='bx bx-compass'></i>
-                    <span class="link_name">Maps</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#maps">Maps</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#contact">
-                    <i class="fas fa-phone-alt"></i>
-                    <span class="link_name">Contact</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#contact">Contact</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <div class="profile-details">
-                    <div class="profile-content">
-                        <img src="https://static-cdn.icons8.com/l/3d/images/3_2_with_phone_man_3.webp" alt="profileImg">
-                    </div>
-                    <div class="name-job">
-                        <div class="profile_name">Mr.Hara Gata</div>
-                        <div class="job"><a href="../formRegister/index.html" style="text-decoration: underline;">log out</a>
-                        </div>
-                    </div>
-                    <a href="onclick=" history.back() "><i class='bx bx-log-out'></i></a>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <section id="home">
-                        <div class="logo">
-                            <img src="https://media.discordapp.net/attachments/988432733552386098/989188386185175050/IMG_4955.png?width=676&height=676"
-                                alt="">
-                        </div>
-                        <div class="content-home">
-                            <h1>SaveLife</h1>
-                            <p>ข้อมูลอุบัติเหตุในพัทยาที่ถูกรวมมา<br>และสรุปเป็นข้อมูลอย่างง่ายเพื่อเปิด<br>โอกาสให้ผู้คนที่สนใจ
-                                มาสำรวจข้อมูล<br>อุบัติเหตุได้โดยง่ายและทำให้ข้อมูล<br>เกิดประโยชน์สูงสุด</p>
-                        </div>
-                        </section>
-
-                        <section class="home-section">
-                            <div class="home-content">
-                                <i class='bx bx-menu'></i>
-                            </div>
-                        </section>
-                        <!-- End sidebar -->
-                        <section id="dashboard">
-                            <!-- Start Home -->
-                            <div class="main">
-                                <div class="cards">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="number">3140</div>
-                                            <div class="card-name" style="font-family: Mali;">บาดเจ็บ</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <i class="fas fa-user"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="number">37</div>
-                                            <div class="card-name" style="font-family: Mali;">เสียชีวิต</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <i class="fas fa-skull-crossbones"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="number">4000</div>
-                                            <div class="card-name" style="font-family: Mali;">รถยนต์และจักรยานยนต์</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <i class="fas fa-car-crash"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="charts">
-                                    <div class="chart">
-                                        <h2 class="c1"
-                                            style="color: rgb(0, 165, 255);text-align: center;font-family: Mali;"">แผนภูมิแท่งการบาดเจ็บและผู้เสียชีวิตในจังหวัดพัทยา</h2>
-                <div id=" chart">
-                                            <canvas id="BarChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="chart" id="doughnut-chart">
-                                    <h2 class="c1" style="color: rgb(0, 165, 255);text-align: center;font-family: Mali;"">แผนภูมิวงกลมการบาดเจ็บและผู้เสียชีวิตในจังหวัดพัทยา</h2>
-                <div id=" chart">
-                                        <canvas id="myDonut"></canvas>
-                                </div>
-                            </div>
-                </div>
-
-                <div class="charts2">
-                    <div class="chart">
-                        <h2 style="color: rgb(0, 165, 255);text-align: center;font-family: Mali;"">แผนที่</h2>
-                <div id=" map1">
-                            <iframe width="100%" height="600px"
-                                src="https://maps.google.com/maps?q=17.20166428712956, 104.1519643002136&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
-                <div class="chart" id="doughnut-chart">
-                    <h2 style="color: rgb(0, 165, 255);text-align: center;font-family: Mali;">
-                        แผนภูมิเส้นการบาดเจ็บและผู้เสียชีวิตในจังหวัดพัทยา</h2>
-                    <div id="chart">
-                        <canvas id="myLine"></canvas>
-                        <canvas id="myLine2"></canvas>
-                    </div>
-                </div>
-    </div>
-    </div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ยินดีต้อนรับสู่</p>
+        <h1>บ้านข้าวหอม</h1>
+        <p class="subcopy">เลือกเมนูที่อยากทาน แล้วส่งออเดอร์เข้าครัวได้เลย</p>
+        <div class="order-status"><span>🧑‍🍳</span><div><strong>ออเดอร์ล่าสุดกำลังปรุง</strong><small>คาดว่าจะเสิร์ฟใน 12 นาที</small></div><span class="chevron">›</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="bowl">🍜</span><span class="leaf leaf-a">✦</span><span class="leaf leaf-b">✦</span></div>
     </section>
 
-    <section id="maps">
-        <div id="map"></div>
-        <!-- <input id="searchPlace">
-        <input id="search"></input>
-        <div id="suggest"></div>
-        <div id="result"></div> -->
-        </div>
+    <section class="content-wrap">
+      <div class="section-heading"><div><p class="eyebrow">เลือกจากเมนู</p><h2>อยากทานอะไรดี?</h2></div><button class="filter">☷ ตัวกรอง</button></div>
+      <div class="categories" role="tablist">
+        <button class="category active" data-category="all">ทั้งหมด</button>
+        <button class="category" data-category="rice">ข้าว &amp; จานเดียว</button>
+        <button class="category" data-category="noodle">เส้น</button>
+        <button class="category" data-category="snack">ของทานเล่น</button>
+        <button class="category" data-category="drink">เครื่องดื่ม</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <article class="menu-card" data-category="rice"><div class="food food-krapao">🍳</div><div class="card-body"><div><span class="tag">ขายดี</span><h3>กะเพราหมูสับไข่ดาว</h3><p>เผ็ดน้อย · เพิ่มไข่ดาวได้</p></div><div class="price-row"><strong>฿89</strong><button class="add" data-name="กะเพราหมูสับไข่ดาว" data-price="89">＋</button></div></div></article>
+        <article class="menu-card" data-category="noodle"><div class="food food-tomyum">🍲</div><div class="card-body"><div><h3>ต้มยำกุ้งน้ำข้น</h3><p>กุ้งสด 4 ตัว · รสจัดจ้าน</p></div><div class="price-row"><strong>฿159</strong><button class="add" data-name="ต้มยำกุ้งน้ำข้น" data-price="159">＋</button></div></div></article>
+        <article class="menu-card" data-category="rice"><div class="food food-curry">🍛</div><div class="card-body"><div><h3>ข้าวแกงกะหรี่ไก่ทอด</h3><p>ไก่ทอดกรอบ · ซอสสูตรบ้านเรา</p></div><div class="price-row"><strong>฿129</strong><button class="add" data-name="ข้าวแกงกะหรี่ไก่ทอด" data-price="129">＋</button></div></div></article>
+        <article class="menu-card" data-category="snack"><div class="food food-wings">🍗</div><div class="card-body"><div><span class="tag soft">แนะนำ</span><h3>ปีกไก่ทอดน้ำปลา</h3><p>6 ชิ้น · เสิร์ฟพร้อมน้ำจิ้มแจ่ว</p></div><div class="price-row"><strong>฿119</strong><button class="add" data-name="ปีกไก่ทอดน้ำปลา" data-price="119">＋</button></div></div></article>
+      </div>
     </section>
+  </main>
 
-    <section id="contact">
-        <div class="container">
-            <div class="content">
-                <div class="left-side">
-                    <div class="address details">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="topic">Address</div>
-                        <div class="text-one">***</div>
-                        <div class="text-two">***</div>
-                    </div>
-                    <div class="phone details">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="topic">Phone</div>
-                        <div class="text-one">+0098 9893 5647</div>
-                        <div class="text-two">+0096 3434 5678</div>
-                    </div>
-                    <div class="email details">
-                        <i class="fas fa-envelope"></i>
-                        <div class="topic">Email</div>
-                        <div class="text-one">***@gmail.com</div>
-                        <div class="text-two">***@gmail.com</div>
-                    </div>
-                </div>
-                <div class="right-side">
-                    <div class="topic-text">Send us a message</div>
-                    <p>If you have any work from me or any types of quries related to my tutorial, you can send me
-                        message from
-                        here. It's my pleasure to help you.</p>
-                    <form action="#">
-                        <div class="input-box">
-                            <input type="text" placeholder="Enter your name">
-                        </div>
-                        <div class="input-box">
-                            <input type="text" placeholder="Enter your email">
-                        </div>
-                        <div class="input-box message-box">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your text"></textarea>
-                        </div>
-                        <div class="button">
-                            <input type="button" value="Send Now">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <img src="https://www.thairsc.com/img/logo_THAIRSC.67d70ccf.png" alt="">
-        <img src="https://www.yakdata.org/wp-content/uploads/2020/07/yak_logo.png" alt="">
-    </footer>
-    <script src="https://kit.fontawesome.com/4480ca9361.js"></script>
-    <script type="text/javascript" src="https://api.longdo.com/map/?key=a25d9bc5a5ab904bee518bd13ed9d375"></script>
-    <script>
-        let arrow = document.querySelectorAll(".arrow");
-        for (var i = 0; i < arrow.length; i++) {
-            arrow[i].addEventListener("click", (e) => {
-                let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-                arrowParent.classList.toggle("showMenu");
-            });
-        }
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".bx-menu");
-        console.log(sidebarBtn);
-        sidebarBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-        });
+  <aside class="cart" id="cart">
+    <div class="cart-top"><div><span class="eyebrow">ออเดอร์ของคุณ</span><h2>โต๊ะ 08</h2></div><button class="text-button" id="clearCart">ล้างรายการ</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty">ยังไม่มีเมนูในรายการ<br><span>กด + เพื่อเพิ่มเมนู</span></p></div>
+    <div class="split-card"><div class="split-icon">÷</div><div><strong>หารบิลกับเพื่อน</strong><p>เลือกเมนูและแบ่งจ่ายได้ตามคน</p></div><button id="splitBill">จัดการ ›</button></div>
+    <div class="total"><span>รวมทั้งหมด</span><strong id="total">฿0</strong></div>
+    <button class="order-button" id="orderButton" disabled>ยืนยันออเดอร์ <span>→</span></button>
+  </aside>
 
-        const myDonut = document.getElementById('myDonut');
-        const myChartD = new Chart(myDonut, {
-            type: 'doughnut',
-            data: {
-                labels: ['จักรยานยนต์', 'รถยนต์'],
-                datasets: [{
-                    label: 'จักรยานยนต์',
-                    data: [19.63, 80.37],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const ctx = document.getElementById('BarChart');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['หนองปลาไหล', 'นาเกลือ', 'หนองปรือ', 'ห้วยใหญ่', 'เกาะล้าน'],
-                datasets: [{
-                    label: 'บาดเจ็บ',
-                    data: [2294, 430, 273, 143, 0],
-                    backgroundColor: [
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }, {
-                    label: 'เสียชีวิต',
-                    data: [22, 3, 8, 4, 0],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const myline = document.getElementById('myLine');
-        const myChartL = new Chart(myline, {
-            type: 'line',
-            data: {
-                labels: ['หนองปลาไหล', 'นาเกลือ', 'หนองปรือ', 'ห้วยใหญ่', 'เกาะล้าน'],
-                datasets: [{
-                    label: 'บาดเจ็บ',
-                    data: [2294, 430, 273, 143, 0],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderWidth: 1
-                }, {
-                    labels: ['หนองปลาไหล', 'นาเกลือ', 'หนองปรือ', 'ห้วยใหญ่', 'เกาะล้าน'],
-                    label: 'เสียชีวิต',
-                    data: [22, 3, 8, 4, 0],
-                    backgroundColor: [
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            }
-        });
-        var marker = new longdo.Marker({ lon: 100.60, lat: 12.60 });
-
-        var marker1 = new longdo.Marker({ lon: 101.2, lat: 12.8 },
-            {
-                title: 'Marker',
-                icon: {
-                    url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
-                    offset: { x: 12, y: 45 }
-                },
-                detail: 'Drag me',
-                visibleRange: { min: 7, max: 9 },
-                draggable: true,
-                weight: longdo.OverlayWeight.Top,
-            });
-
-        var marker = new longdo.Marker({ lon: 100.60, lat: 12.60 });
-
-        var marker1 = new longdo.Marker({ lon: 101.2, lat: 12.8 },
-            {
-                title: 'Marker',
-                icon: {
-                    url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
-                    offset: { x: 12, y: 45 }
-                },
-                detail: 'Drag me',
-                visibleRange: { min: 7, max: 9 },
-                draggable: true,
-                weight: longdo.OverlayWeight.Top,
-            });
-
-        var map;
-        var search;
-
-        function init() {
-            map = new longdo.Map({
-                placeholder: document.getElementById('map')
-            });
-            search = document.getElementById('search');
-
-            map.Search.placeholder(
-                document.getElementById('result')
-            );
-
-            search.onkeyup = function (event) {
-                if ((event || window.event).keyCode != 13)
-                    return;
-                doSearch();
-            }
-
-            search.oninput = function () {
-                if (search.value.length < 3) {
-                    suggest.style.display = 'none';
-                    return;
-                }
-
-                map.Search.suggest(search.value, {
-                    area: 20150
-                });
-            };
-
-            function doSearch() {
-                map.Search.search(search.value, {
-                    area: 20150,
-
-                });
-                suggest.style.display = 'none';
-            }
-
-            map.location({ lon: 100, lat: 16 }, true);
-            map.location(longdo.LocationMode.Geolocation);
-
-            map.Layers.setBase(longdo.Layers.GRAY);
-            map.Overlays.add(marker);
-            map.Overlays.add(marker1);
-        }
-
-    </script>
+  <div class="toast" id="toast">เพิ่มเมนูลงในออเดอร์แล้ว</div>
+  <script src="script.js"></script>
 </body>
-
 </html>
